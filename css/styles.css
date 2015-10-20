@@ -1,0 +1,17 @@
+.jumbotron h1 {font-size: 4.25em;}
+.checkbox:last-child label {
+    width: 100px;
+}
+#amtBox {
+    text-align: center;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    position: fixed;
+    right: 10em;
+    z-index: 99;
+}
+#amtBox p:last-child {font-size: 1.5em;}
+#text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #text10, #text11, #text12, #text13, #text14, #cctext1, #cctext2, #yearText {color: red;}
+#mastercard, #visa, #amex {padding-left: 5px;}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/pizza-icon.png">
+
+    <title>Pizza Company Ordering Form</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <!-- JS -->
+    <script src="js/script.js" type="text/javascript"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+     <div id="amtBox">
+         <p>Total Amount Due:</p>
+         <p>$<span id="totAmt">0.00</span></p>
+     </div>
+      <div class="jumbotron">
+          <img class="pull-left" src="assets/pizza.png"><h1>Pizza Company</h1><h2>Ordering Form</h2><br>
+        <p class="lead">Come taste our delicous pizza! Just fill out our simple ordering form and the pizza will be delivered to your doorstep in no time!</p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+           <h4>Please fill out the form below to complete your order:</h4>
+            <form>
+<!----------------------------------------PART 1--------------------------------------->
+             <fieldset><hr>
+                 <h3>Part 1 - Delivery Information</h3><br>
+                  <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                    <p id="text1"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                  <p id="text2"></p>
+                  </div>
+                  <label for="addresstype">Address Type</label>
+                  <select class="form-control" id="addresstype">
+                    <option value="1">House</option>
+                    <option value="2">Apartment</option>
+                    <option value="3">Business</option>
+                    <option value="4">Campus</option>
+                    <option value="5">Hotel</option>
+                    <option value="6">Dorm</option>
+                    <option value="7">Other</option>
+                  </select>
+                  <p id="demo"></p>
+                  <div class="form-group" id="otheraddresstype">
+                    <label for="otheraddresstype">If Other, please enter type</label>
+                    <input type="text" id="deladdtype" class="form-control" placeholder="Address Type">
+                  </div>
+                  <div class="form-group">
+                    <label for="addressstreet">Street Address</label>
+                    <input type="text" class="form-control" id="addressstreet" placeholder="Street Address">
+                    <p id="text3"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="aptnumber">Apt, Ste, Room #</label>
+                    <input type="text" class="form-control" id="aptnumber" placeholder="Apt, Ste, Room #(Optional)">
+                  </div>
+                  <div class="form-group">
+                    <label for="addresscity">City</label>
+                    <input type="text" class="form-control" id="addresscity" placeholder="City">
+                    <p id="text4"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="addressstate">State</label>
+                    <input type="text" class="form-control" id="addressstate" placeholder="State Abbr.">
+                    <p id="text5"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="addresszip">Zip Code</label>
+                    <input type="text" class="form-control" id="addresszip" placeholder="Zip Code XXXXX">
+                    <p id="text6"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Phone Number XXX-XXX-XXXX">
+                    <p id="text7"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email Address">
+                    <p id="text8"></p>
+                  </div>
+             </fieldset>
+<!----------------------------------------PART 2--------------------------------------->
+             <fieldset><hr>
+                 <h3>Part 2 - Build Your Order</h3><br>
+                 <!------------------------STEP 1--------------------------------------->
+                 <h4>Step 1: Choose your dough</h4>
+                 <div class="radio">
+                  <label>
+                    <input type="radio" name="dough" id="handtossed" value="handtossed">
+                    Hand Tossed
+                  </label>
+                </div>
+                 <div class="radio">
+                  <label>
+                    <input type="radio" name="dough" id="thincrust" value="thincrust">
+                    Thin Crust
+                  </label>
+                </div>
+                 <div class="radio">
+                  <label>
+                    <input type="radio" name="dough" id="newyork" value="newyork">
+                    New York Style
+                  </label>
+                </div>
+                 <div class="radio">
+                  <label>
+                    <input type="radio" name="dough" id="glutenfree" value="glutenfree">
+                    Gluten Free
+                  </label>
+                </div>
+                <br>
+                <!------------------------STEP 2--------------------------------------->
+                <h4>Step 2: Choose your size</h4>
+                <select class="form-control" id="pizzasize"></select><br>
+                
+                <!------------------------STEP 3--------------------------------------->
+                <h4>Step 3: Cheese Options</h4>
+                <select class="form-control" id="cheese">
+                    <option value="normal">Normal: no charge</option>
+                    <option value="light">Light: no charge</option>
+                    <option value="extra">Extra: +$2.99</option>
+                    <option value="double">Double: +$3.99</option>
+                </select><br>
+                <!------------------------STEP 4--------------------------------------->
+                <h4>Step 4: Sauce Options</h4>
+                <select class="form-control" id="sauce">
+                    <option value="regular">Regular Tomato: no charge</option>
+                    <option value="hearty">Hearty Tomato: +$.99</option>
+                    <option value="bbq">BBQ Sauce: +$1.99</option>
+                </select><br><br>
+                <!------------------------STEP 5--------------------------------------->
+                <h4>Step 5: Toppings (+ $0.99 extra/topping)</h4>
+                <div class="checkbox" id="toppings">
+                  <label>
+                    <input type="checkbox" class="toppings" value="pepperoni">
+                    Pepperoni
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="sausage">
+                    Sausage
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="ham">
+                    Ham
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="bacon">
+                    Bacon
+                  </label><br>
+                  <label>
+                    <input type="checkbox" class="toppings" value="salami">
+                    Salami
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="peppers">
+                    Peppers
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="olives">
+                   Olives
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="jalapenos">
+                    Jalapenos
+                  </label><br>
+                  <label>
+                    <input type="checkbox" class="toppings" value="mushrooms">
+                    Mushrooms
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="pineapple">
+                   Pineapple
+                  </label>
+                  <label>
+                    <input type="checkbox" class="toppings" value="onion">
+                    Onion
+                  </label>
+                </div>
+             </fieldset>
+<!----------------------------------------PART 3--------------------------------------->
+             <fieldset id="billing"><hr>
+                 <h3>Part 3 - Billing Information</h3><br>
+                   <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="delAddress">Same as delivery information
+                    </label>
+                    </div><br>
+                  <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" id="bilfirstname" placeholder="First Name">
+                    <p id="text9"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="billastname" placeholder="Last Name">
+                    <p id="text10"></p>
+                  </div>
+                  <label for="addresstype">Address Type</label>
+                  <select class="form-control" id="addresstype2">
+                    <option value="1">House</option>
+                    <option value="2">Apartment</option>
+                    <option value="3">Business</option>
+                    <option value="4">Campus</option>
+                    <option value="5">Hotel</option>
+                    <option value="6">Dorm</option>
+                    <option value="7">Other</option>
+                  </select><br>
+                  <div class="form-group" id="otheraddresstype2">
+                    <label for="otheraddresstype">If Other, please enter type</label>
+                    <input type="text" id="biladdtype" class="form-control" placeholder="Address Type">
+                  </div>
+                  <div class="form-group">
+                    <label for="addressstreet">Street Address</label>
+                    <input type="text" class="form-control" id="biladdressstreet" placeholder="Street Address">
+                    <p id="text11"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="aptnumber">Apt, Ste, Room #</label>
+                    <input type="text" class="form-control" id="bilaptnumber" placeholder="Apt, Ste, Room #(Optional)">
+                  </div>
+                  <div class="form-group">
+                    <label for="addresscity">City</label>
+                    <input type="text" class="form-control" id="biladdresscity" placeholder="City">
+                    <p id="text12"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="addressstate">State</label>
+                    <input type="text" class="form-control" id="biladdressstate" placeholder="State">
+                    <p id="text13"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="addresszip">Zip Code</label>
+                    <input type="text" class="form-control" id="biladdresszip" placeholder="Zip Code">
+                    <p id="text14"></p>
+                  </div><br>
+                  <h4>Credit Card Information</h4>
+                  <div class="form-group">
+                    <label for="ccnumber">Credit Card Number<img id="mastercard" src="assets/mastercardlogo.png"><img id="visa" src="assets/visalogo.png"><img id="amex" src="assets/amexlogo.png"></label>
+                    <input type="text" class="form-control" id="ccnumber" placeholder="CC Number">
+                    <p id="cctext1"></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="cvccode">CVC</label>
+                    <input type="text" class="form-control" id="cvccode" placeholder="CVC">
+                    <p id="cctext2"></p>
+                  </div>
+                  <label for="month">Expiration Month</label>
+                  <select class="form-control" id="ccmonth">
+                   <option value="null">Select Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                  <label for="year">Year</label>
+                  <select class="form-control" id="ccyear">
+                   <option value="null">Select Year</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                  </select>
+                  <p id="yearText"></p>
+             </fieldset><br><br>
+<!----------------------------------------SUBMIT--------------------------------------->
+             <button type="submit" id="btnfinished" class="btn btn-default">Finished Pizza Building</button>
+             <button type="submit" id="btnsubmit" class="btn btn-default">Submit Order</button>
+            </form>
+        </div>
+      </div>
+        
+      <footer class="footer">
+        <p>&copy; Pizza Company 2014</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
